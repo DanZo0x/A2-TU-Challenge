@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -144,7 +145,7 @@ namespace TU_Challenge
         [TestCase(20, 20, 0)]
         public void IsInOrder(int a, int b, int expected)
         {
-            var result = MyMathImplementation.IsInOrder(a, b);
+            int result = MyMathImplementation.IsInOrder(a, b);
             Assert.That(result, Is.EqualTo(expected));
         }
 
@@ -185,7 +186,7 @@ namespace TU_Challenge
         {
             var toSort = new List<int>() { 12, 0, -1, 123, 45, 90, -123 };
 
-            var result = MyMathImplementation.Sort(toSort);
+            List<int> result = MyMathImplementation.Sort(toSort);
 
             for (int i = 0; i < result.Count-1; i++)
             {
@@ -202,7 +203,7 @@ namespace TU_Challenge
         {
             var toSort = new List<int>() { 12, 0, -1, 123, 45, 90, -123 };
 
-            var result = MyMathImplementation.GenericSort(toSort, MyMathImplementation.IsInOrder);
+            List<int> result = MyMathImplementation.GenericSort(toSort, MyMathImplementation.IsInOrder);
 
             for (int i = 0; i < result.Count - 1; i++)
             {
@@ -217,7 +218,7 @@ namespace TU_Challenge
         {
             var toSort = new List<int>() { 12, 0, -1, 123, 45, 90, -123 };
 
-            var result = MyMathImplementation.GenericSort(toSort, MyMathImplementation.IsInOrderDesc);
+            List<int> result = MyMathImplementation.GenericSort(toSort, MyMathImplementation.IsInOrderDesc);
 
             for (int i = 0; i < result.Count - 1; i++)
             {

@@ -1,4 +1,6 @@
-﻿namespace TU_Challenge.Heritage
+﻿using System;
+
+namespace TU_Challenge.Heritage
 {
 
     public class Animal
